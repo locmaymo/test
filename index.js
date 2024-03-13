@@ -14,7 +14,7 @@ app.use(
     changeOrigin: true,
     onProxyReq: (proxyReq, req, res) => {
       console.log(req.originalUrl);
-      proxyReq.setHeader("Authorization", `Bearer sess-Wo7h7Wd1R6WMaIGqFUDv7bV0UxpHZYOjxUd3xsZB`);
+      proxyReq.setHeader("Authorization", `Bearer ${process.env.OPENAI_API_KEY}`);
     },
     onProxyRes: (proxyRes, req, res) => {
       proxyRes.headers["Access-Control-Allow-Origin"] = "*";
