@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const PORT = 3000;
+const PORT = 7860;
 
 const {createProxyMiddleware} = require("http-proxy-middleware");
 const app = express();
